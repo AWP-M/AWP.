@@ -39,7 +39,7 @@
         @keyframes fade { from { opacity: 0; } to { opacity: 1; } }
         .nav-btn { cursor: pointer; opacity: 0.6; transition: 0.2s; }
         .nav-btn:hover { opacity: 1; }
-        .active-link { opacity: 1; color: #3b82f6; border-bottom: 2px solid #3b82f6; }
+        .active-link { opacity: 1; color: #3b82f6 !important; border-bottom: 2px solid #3b82f6; }
         #typing::after { content: '|'; color: #3b82f6; animation: blink 1s infinite; }
         @keyframes blink { 50% { opacity: 0; } }
     </style>
@@ -49,49 +49,22 @@
     <nav class="fixed top-6 z-50 flex justify-center w-full px-4">
         <div class="bg-black/60 backdrop-blur-lg border border-white/10 px-6 py-3 rounded-full flex items-center gap-6 text-[11px] font-bold uppercase tracking-wider">
             <span onclick="setPage('home')" id="l-home" class="nav-btn active-link">Home</span>
-            <span onclick="setPage('mods')" id="l-mods" class="nav-btn">Features</span>
             <span onclick="setPage('status')" id="l-status" class="nav-btn">Status</span>
             <span onclick="setPage('creds')" id="l-creds" class="nav-btn">Credits</span>
             <span onclick="setPage('logs')" id="l-logs" class="nav-btn">Logs</span>
-            <a href="https://discord.gg/RaEJjvUq" target="_blank" class="bg-blue-600 px-4 py-1.5 rounded-full glow-b hover:bg-blue-500 transition">Discord</a>
+            <a href="https://discord.gg/RaEJjvUq" target="_blank" class="bg-blue-600 px-4 py-1.5 rounded-full glow-b hover:bg-blue-500 transition text-white">Discord</a>
         </div>
     </nav>
 
     <section id="home" class="page page-active flex-col items-center justify-center w-full max-w-5xl px-6">
         <div class="panel-main w-full p-12 md:p-20 text-center relative overflow-hidden">
             <div class="absolute -top-10 -right-10 w-64 h-64 bg-blue-600/10 blur-[80px]"></div>
-            <h1 class="text-5xl md:text-7xl font-black mb-4 tracking-tighter uppercase">AWP <span class="text-blue-500 text-glow">ON TOP</span></h1>
+            <h1 class="text-5xl md:text-7xl font-black mb-4 tracking-tighter uppercase">AWP <span class="text-blue-500">PROJECT</span></h1>
             <div class="h-8 mb-8"><span id="typing" class="text-xl md:text-2xl font-semibold text-gray-400"></span></div>
-            <p class="text-gray-500 text-sm md:text-base max-w-xl mx-auto mb-10">We're rewriting the menu for v1.2 to keep it undetected. Join the inner circle.</p>
+            <p class="text-gray-500 text-sm md:text-base max-w-xl mx-auto mb-10 italic">"The wait is over. v1.0 is officially released and undetected."</p>
             <div class="flex flex-wrap justify-center gap-4">
-                <button onclick="setPage('mods')" class="bg-blue-600 px-8 py-3 rounded-xl font-bold glow-b">View Mods</button>
+                <button onclick="setPage('status')" class="bg-blue-600 px-8 py-3 rounded-xl font-bold glow-b text-white">Check Security</button>
                 <button onclick="setPage('creds')" class="bg-white/5 border border-white/10 px-8 py-3 rounded-xl font-bold">The Team</button>
-            </div>
-        </div>
-    </section>
-
-    <section id="mods" class="page flex-col items-center justify-center w-full max-w-6xl px-6 pt-32 pb-20">
-        <h2 class="text-3xl font-black mb-10 uppercase italic">Current <span class="text-blue-500">Utility</span></h2>
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 w-full">
-            <div class="card-item p-8 text-center">
-                <div class="text-4xl mb-4">🦍</div>
-                <h3 class="font-bold mb-2 uppercase text-sm">Long Arms</h3>
-                <p class="text-gray-500 text-xs">Smooth skeletal reach mods.</p>
-            </div>
-            <div class="card-item p-8 text-center">
-                <div class="text-4xl mb-4">👁️</div>
-                <h3 class="font-bold mb-2 uppercase text-sm">ESP Chams</h3>
-                <p class="text-gray-500 text-xs">Player outlines through map objects.</p>
-            </div>
-            <div class="card-item p-8 text-center">
-                <div class="text-4xl mb-4">⚡</div>
-                <h3 class="font-bold mb-2 uppercase text-sm">Movement</h3>
-                <p class="text-gray-500 text-xs">Bypassed speed and flight mods.</p>
-            </div>
-            <div class="card-item p-8 text-center border-dashed border-blue-500/20">
-                <div class="text-4xl mb-4 opacity-40">✨</div>
-                <h3 class="font-bold mb-2 uppercase text-sm italic">And etc !</h3>
-                <p class="text-gray-500 text-xs">Dozens of secret mods inside.</p>
             </div>
         </div>
     </section>
@@ -99,7 +72,7 @@
     <section id="creds" class="page flex-col items-center justify-center w-full max-w-4xl px-6 pt-32 pb-20">
         <h2 class="text-3xl font-black mb-10 uppercase text-center">Project <span class="text-blue-500">Credits</span></h2>
         <div class="grid grid-cols-1 md:grid-cols-2 gap-6 w-full">
-            <div class="card-item p-8 relative overflow-hidden border-blue-500/10">
+            <div class="card-item p-8 relative overflow-hidden border-blue-500/10 text-white">
                 <span class="absolute top-4 right-4 text-[10px] font-bold text-blue-500/40 uppercase tracking-widest">Founder</span>
                 <h3 class="text-2xl font-black mb-1">Rosary</h3>
                 <p class="text-blue-400 text-[10px] font-bold uppercase mb-4">Lead Programmer</p>
@@ -109,7 +82,7 @@
                     <p>● Core Architecture</p>
                 </div>
             </div>
-            <div class="card-item p-8 relative overflow-hidden border-blue-500/10">
+            <div class="card-item p-8 relative overflow-hidden border-blue-500/10 text-white">
                 <span class="absolute top-4 right-4 text-[10px] font-bold text-blue-500/40 uppercase tracking-widest">Co-Founder</span>
                 <h3 class="text-2xl font-black mb-1">Zyphoria</h3>
                 <p class="text-blue-400 text-[10px] font-bold uppercase mb-4">Operations & Dev</p>
@@ -123,30 +96,33 @@
     </section>
 
     <section id="status" class="page flex-col items-center justify-center w-full max-w-3xl px-6 pt-32 pb-20">
-        <div class="panel-main w-full p-10 text-center glow-r border-red-500/10">
+        <div class="panel-main w-full p-10 text-center glow-b border-blue-500/10">
             <h2 class="text-2xl font-bold mb-8 uppercase tracking-widest">System Status</h2>
             <div class="flex justify-around items-center">
-                <div class="text-red-500 font-black text-xl animate-pulse">● OFFLINE</div>
-                <div class="text-green-500 font-black text-xl">● ONLINE</div>
+                <div class="text-green-500 font-black text-xl animate-pulse">● UNDETECTED</div>
+                <div class="text-blue-400 font-black text-xl italic">VERSION 1.0</div>
             </div>
-            <p class="mt-8 text-gray-500 text-xs italic italic">Rewriting bypasses for latest patch.</p>
+            <p class="mt-8 text-gray-500 text-xs uppercase tracking-tighter">Bypasses working on latest GTAG patch.</p>
         </div>
     </section>
 
     <section id="logs" class="page flex-col items-center justify-center w-full max-w-2xl px-6 pt-32 pb-20">
-        <h2 class="text-2xl font-bold mb-8 uppercase text-center">Update <span class="text-blue-500">History</span></h2>
-        <div class="card-item p-6 w-full border-l-2 border-blue-600">
-            <p class="text-blue-400 text-[10px] font-bold mb-2 uppercase">v1.2 In-Dev</p>
+        <h2 class="text-2xl font-bold mb-8 uppercase text-center">Development <span class="text-blue-500">Logs</span></h2>
+        <div class="card-item p-6 w-full border-l-2 border-blue-600 mb-4">
+            <p class="text-blue-400 text-[10px] font-bold mb-2 uppercase">v1.0 (Live Release)</p>
             <div class="text-gray-400 text-xs space-y-2">
-                <p>● Injector safety rewrite.</p>
-                <p>● SteamVR jitter fix.</p>
-                <p>● Hits 25 members.</p>
+                <p>● Initial public release of AWP Menu.</p>
+                <p>● Implemented first-gen anti-cheat bypasses.</p>
+                <p>● Added 20+ core features for testing.</p>
             </div>
+        </div>
+        <div class="card-item p-6 w-full border-l-2 border-gray-600 opacity-50">
+            <p class="text-gray-500 text-[10px] font-bold mb-2 uppercase italic">Previous History Hidden</p>
         </div>
     </section>
 
     <footer class="py-10 text-gray-700 text-[9px] font-bold uppercase tracking-widest">
-        AWP PROJECT // 2026 // 25 MEMBERS
+        AWP PROJECT // 2026 // v1.0 RELEASE
     </footer>
 
     <script>
@@ -158,7 +134,7 @@
             window.scrollTo(0,0);
         }
 
-        const lines = ["Under Development", "Coming Soon", "AWP On Top", "Highly Reliable", "Building Bypasses"];
+        const lines = ["v1.0 Is Live", "Fully Undetected", "The Wait Is Over", "AWP On Top", "Bypass Working"];
         let i = 0, j = 0, del = false;
         function type() {
             const line = lines[i];
